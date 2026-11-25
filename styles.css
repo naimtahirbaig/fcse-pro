@@ -492,3 +492,17 @@ html[dir=rtl] .wa-float{right:auto;left:16px}
 @keyframes plwhirl{0%{transform:rotate(0) scale(.82)}50%{transform:rotate(360deg) scale(1.08)}100%{transform:rotate(720deg) scale(.82)}}
 @keyframes plring{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.pl-wrap img{animation:none}.pl-ring{animation-duration:2.4s}}
+/* Loader logo ~40% of the screen */
+#preloader{--pl:min(40vh,80vw)}
+.pl-wrap{width:calc(var(--pl)*1.18);height:calc(var(--pl)*1.18)}
+.pl-wrap img{width:var(--pl);height:var(--pl);filter:drop-shadow(0 0 30px rgba(34,184,255,.55))}
+.pl-ring{border-width:4px}
+/* Larger loader: about 40% of the screen */
+.pl-wrap{width:max(40vmin,230px);height:max(40vmin,230px)}
+.pl-wrap img{width:70%;height:70%}
+.pl-ring{border-width:clamp(4px,.9vmin,8px)}
+.pl-wrap{width:max(46vmin,240px);height:max(46vmin,240px)}
+.pl-wrap img{width:104%;height:104%;max-width:none}
+/* Loader at about 70% of the screen */
+.pl-wrap{width:max(70vmin,260px);height:max(70vmin,260px)}
+.pl-ring{border-width:clamp(5px,1.1vmin,12px)}
