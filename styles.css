@@ -506,3 +506,6 @@ html[dir=rtl] .wa-float{right:auto;left:16px}
 /* Loader at about 70% of the screen */
 .pl-wrap{width:max(70vmin,260px);height:max(70vmin,260px)}
 .pl-ring{border-width:clamp(5px,1.1vmin,12px)}
+/* Loader final size: about 40% of the screen */
+.pl-wrap{width:max(40vmin,220px);height:max(40vmin,220px)}
+.pl-ring{border-width:clamp(4px,.9vmin,9px)}
