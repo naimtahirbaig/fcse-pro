@@ -207,3 +207,11 @@ footer { padding-bottom: 84px; }
 .pimg:not(.ph) img { background: transparent; mix-blend-mode: multiply; border-radius: 0; }
 .gal-item { background: #fff url(assets/watermark-bg.png) center / 110px 110px no-repeat; }
 .gal-item img { mix-blend-mode: multiply; }
+
+/* Brand links between catalog and gallery */
+a.tile.tile-link { flex-direction: column; gap: 2px; text-decoration: none; color: var(--ink); padding: 10px 6px; text-align: center; }
+a.tile.tile-link b { font-weight: 600; }
+a.tile.tile-link small { font-family: var(--body); font-size: .8rem; color: var(--ink-soft); letter-spacing: 0; }
+a.tile.tile-link:hover { border-color: var(--blue); color: var(--blue-dark); }
+.gal-link { display: inline-block; margin-top: 8px; font-weight: 700; font-size: .9rem; }
+.gal-cta { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }

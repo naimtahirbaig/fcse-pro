@@ -3,6 +3,12 @@
   var PAGE = 60, chips = document.getElementById('brandChips'), grid = document.getElementById('galGrid'),
       more = document.getElementById('galMore'), count = document.getElementById('galCount');
   var current = [], shown = 0, active = 'all';
+  var cta = document.getElementById('galCatalog'), CAT = { dell: 'Dell', hp: 'HP', lenovo: 'Lenovo', asus: 'ASUS', acer: 'Acer', msi: 'MSI' };
+  function updateCta(key) {
+    if (!cta) return;
+    if (CAT[key]) { cta.href = 'parts.html#brand=' + CAT[key]; cta.textContent = CAT[key] + ' parts catalog'; }
+    else { cta.href = 'parts.html'; cta.textContent = 'Parts catalog'; }
+  }
   var total = D.brands.reduce(function (n, b) { return n + b.files.length; }, 0);
   function list(key) {
     var out = [];
@@ -24,7 +30,7 @@
   function select(key) {
     active = key; current = list(key); shown = 0; grid.innerHTML = '';
     [].forEach.call(chips.children, function (c) { c.setAttribute('aria-pressed', c.dataset.key === key ? 'true' : 'false'); });
-    add();
+    add(); updateCta(key);
     if (history.replaceState) history.replaceState(null, '', key === 'all' ? location.pathname : '#' + key);
   }
   function chip(key, label, n) {
