@@ -143,7 +143,7 @@
     var qempty = $('qempty'), qclear = $('qclear'), qform = $('qform'), qstatus = $('qstatus');
     var qmail = $('qmail'), qwa = $('qwa');
     var quoteText = function () {
-      var c = loadCart(), lines = ['Quote request for First Computer Service & Engineering', ''];
+      var c = loadCart(), lines = ['Quote request for First Computer Service & Engineering (FCSE)', ''];
       lines.push('Name: ' + $('qn').value.trim(), 'Phone: ' + $('qp').value.trim());
       if ($('qm').value.trim()) lines.push('Laptop model: ' + $('qm').value.trim());
       lines.push('', 'Parts:');
@@ -209,7 +209,7 @@
   if (bform) {
     var bstatus = $('bstatus'), bmail = $('bmail'), bwa = $('bwa');
     var bookText = function () {
-      var lines = ['Repair booking for First Computer Service & Engineering', ''];
+      var lines = ['Repair booking for First Computer Service & Engineering (FCSE)', ''];
       lines.push('Name: ' + $('bn').value.trim(), 'Phone: ' + $('bp').value.trim());
       lines.push('Device: ' + $('bd').value);
       if ($('bb').value.trim()) lines.push('Brand and model: ' + $('bb').value.trim());
