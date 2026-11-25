@@ -136,7 +136,7 @@
   // dropdown UI in the top bar
   var tb = document.querySelector('.topbar .wrap');
   if (tb && !document.querySelector('.lang')) {
-    var call = tb.querySelector('a');
+    var call = tb.querySelector('a[href^="tel:"]');
     var right = document.createElement('div'); right.className = 'tb-right';
     if (call) right.appendChild(call);
     var box = document.createElement('div'); box.className = 'lang notranslate'; box.setAttribute('translate', 'no');
