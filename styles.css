@@ -424,3 +424,10 @@ footer a:hover{color:var(--gold-soft)}
 .phones a:hover{border-color:var(--gold);background:rgba(212,175,55,.12);color:#fff}
 .contact .map{border:1px solid rgba(212,175,55,.45);border-radius:16px;padding:28px;background:linear-gradient(160deg,var(--navy-850),var(--navy-900));box-shadow:0 16px 40px rgba(0,0,0,.45)}
 .contact .map h3{color:var(--gold-soft)}
+
+/* Official WhatsApp look for the floating button */
+.wa-float{background:#25d366;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,.5);animation:wapulse 2.6s ease-out infinite}
+.wa-float svg{width:30px;height:30px}
+.wa-float:hover{background:#1ebe5a;color:#fff;animation:none}
+@keyframes wapulse{0%{box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,0)}}
+@media (prefers-reduced-motion:reduce){.wa-float{animation:none}}
