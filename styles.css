@@ -215,3 +215,16 @@ a.tile.tile-link small { font-family: var(--body); font-size: .8rem; color: var(
 a.tile.tile-link:hover { border-color: var(--blue); color: var(--blue-dark); }
 .gal-link { display: inline-block; margin-top: 8px; font-weight: 700; font-size: .9rem; }
 .gal-cta { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+
+/* Gallery captions: part name under each picture */
+.gal-grid { grid-template-columns: repeat(auto-fill, minmax(138px, 1fr)); gap: 12px; }
+.gal-item { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; aspect-ratio: auto; padding: 10px 6px 12px; background: #fff; text-align: center; }
+.gal-pic { width: 110px; height: 110px; background: url(assets/watermark-bg.png) center / 110px 110px no-repeat; }
+.gal-pic img { width: 110px; height: 110px; object-fit: contain; mix-blend-mode: multiply; }
+.gal-item figcaption { display: grid; gap: 1px; line-height: 1.2; }
+.gal-item figcaption b { font-size: .92rem; color: var(--ink); }
+.gal-item figcaption span { font-size: .8rem; color: var(--ink-soft); }
+.gal-tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 16px 0 0; }
+.gal-tools .field { display: grid; gap: 4px; }
+.gal-tools label { font-weight: 700; font-size: .9rem; }
+.gal-tools select, .gal-tools input { min-height: 44px; border: 2px solid var(--line); border-radius: 8px; padding: 0 12px; font: inherit; background: #fff; min-width: 200px; }
