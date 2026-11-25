@@ -176,3 +176,19 @@
     var s = document.createElement('script'); s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'; s.async = true; document.head.appendChild(s);
   }
 })();
+
+/* Instant navigation: prefetch a page when the pointer is over its link or on touch */
+(function () {
+  var done = {};
+  function pf(e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || a.target === '_blank') return;
+    var u; try { u = new URL(a.href, location.href); } catch (x) { return; }
+    if (u.origin !== location.origin || u.pathname === location.pathname || done[u.pathname]) return;
+    if (navigator.connection && navigator.connection.saveData) return;
+    done[u.pathname] = 1;
+    var l = document.createElement('link'); l.rel = 'prefetch'; l.href = u.pathname; document.head.appendChild(l);
+  }
+  document.addEventListener('mouseover', pf, { passive: true });
+  document.addEventListener('touchstart', pf, { passive: true });
+})();
