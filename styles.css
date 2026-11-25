@@ -201,3 +201,9 @@ footer { padding-bottom: 84px; }
 .gal-more { display: flex; justify-content: center; margin-top: 24px; }
 .gal-more[hidden], #galMore[hidden] { display: none; }
 .parts-more { margin-top: 20px; }
+
+/* Logo watermark sits behind part photos (photos are clean, with a white background) */
+.pimg:not(.ph) { background: #fff url(assets/watermark-bg.png) center / 150px 150px no-repeat; }
+.pimg:not(.ph) img { background: transparent; mix-blend-mode: multiply; border-radius: 0; }
+.gal-item { background: #fff url(assets/watermark-bg.png) center / 110px 110px no-repeat; }
+.gal-item img { mix-blend-mode: multiply; }
