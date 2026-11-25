@@ -431,3 +431,11 @@ footer a:hover{color:var(--gold-soft)}
 .wa-float:hover{background:#1ebe5a;color:#fff;animation:none}
 @keyframes wapulse{0%{box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,0)}}
 @media (prefers-reduced-motion:reduce){.wa-float{animation:none}}
+
+/* Bigger brand name in header */
+.brand { gap: 14px; }
+.brand img { width: 66px; height: 66px; }
+.brand b { font-size: 2.3rem; letter-spacing: .03em; }
+.brand span { font-size: 1.05rem; font-weight: 700; letter-spacing: .02em; color: var(--gold-soft); }
+@media (max-width: 1180px) { .brand img { width: 56px; height: 56px; } .brand b { font-size: 1.9rem; } .brand span { font-size: .92rem; } }
+@media (max-width: 520px) { .brand { gap: 10px; } .brand img { width: 44px; height: 44px; } .brand b { font-size: 1.45rem; } .brand span { font-size: .78rem; } }
