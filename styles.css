@@ -482,3 +482,13 @@ html[dir=rtl] .wa-float{right:auto;left:16px}
 .lang-menu li[hidden]{display:none}
 .lang-q{width:100%;min-height:38px;border-radius:8px;border:1px solid var(--line);background:var(--navy-900);color:var(--ink);padding:0 10px;font:inherit}
 .lang-q:focus{outline:2px solid var(--gold);outline-offset:1px}
+
+/* Page-load whirl */
+#preloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#12306b 0%,#0a1128 45%,#070b16 100%);transition:opacity .45s ease,visibility .45s ease}
+#preloader.done{opacity:0;visibility:hidden}
+.pl-wrap{position:relative;width:150px;height:150px;display:grid;place-items:center}
+.pl-wrap img{width:96px;height:96px;object-fit:contain;animation:plwhirl 1.6s cubic-bezier(.6,0,.35,1) infinite;filter:drop-shadow(0 0 18px rgba(34,184,255,.55))}
+.pl-ring{position:absolute;inset:0;border-radius:50%;border:3px solid rgba(212,175,55,.18);border-top-color:#d4af37;border-right-color:#f3d97e;animation:plring 1.1s linear infinite;filter:drop-shadow(0 0 8px rgba(212,175,55,.5))}
+@keyframes plwhirl{0%{transform:rotate(0) scale(.82)}50%{transform:rotate(360deg) scale(1.08)}100%{transform:rotate(720deg) scale(.82)}}
+@keyframes plring{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.pl-wrap img{animation:none}.pl-ring{animation-duration:2.4s}}
