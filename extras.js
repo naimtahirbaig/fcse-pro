@@ -14,7 +14,7 @@
   if (header && !document.querySelector('.strip')) {
     var items = [
       'Quote before any work starts',
-      'Four phone numbers, call any of them',
+      'Three phone numbers, call any of them',
       'Abbot Road, near Jamia Masjid, Sialkot',
       'Over 4,800 spare part photos in our gallery',
       'Your data stays yours'

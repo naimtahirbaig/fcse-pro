@@ -387,3 +387,40 @@ section.block.panel-blue{background:linear-gradient(180deg,var(--navy-850),#1024
 section.block.panel-cyan{background:linear-gradient(180deg,var(--navy-900),#0b2a45);border-block:1px solid var(--line)}
 .grid>.card{height:100%}
 .gal-item{min-height:100%}
+
+/* ===== Gold accent + stylish contact card ===== */
+:root{--gold:#d4af37;--gold-soft:#f3d97e;--gold-deep:#a67c00;--gold-grad:linear-gradient(135deg,#f8e08e 0%,#d4af37 48%,#a67c00 100%)}
+.topbar a{color:var(--gold-soft)}
+.pill{border-color:rgba(212,175,55,.55);color:var(--gold-soft)}
+.pill i{background:var(--gold)}
+.section-head h2::after{content:"";display:block;width:56px;height:3px;margin-top:10px;border-radius:2px;background:var(--gold-grad)}
+.subnav{border-bottom-color:var(--gold)}
+.subnav a[aria-current=page]{background:var(--gold-grad);color:#1a1300}
+.strip span::after{background:var(--gold)}
+.stat b{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.steps li::before{background:var(--gold-grad);color:#1a1300}
+.card:hover,.pcard:hover,a.gcard:hover,.steps li:hover{border-color:var(--gold)}
+.card svg{color:var(--gold-soft)}
+.faq details[open]{border-color:var(--gold)}
+.faq summary::after{color:var(--gold)}
+.side-tabs a{background:var(--gold-grad);color:#1a1300}
+.side-tabs a:hover,.side-tabs a:focus-visible{background:var(--gold-soft);color:#1a1300}
+.cta-band{border-top:2px solid var(--gold)}
+.cta-band h2{color:var(--gold-soft)}
+.promise h3{color:var(--gold-soft)}
+footer a:hover{color:var(--gold-soft)}
+.hero h1 .hl{background:linear-gradient(90deg,var(--sky),var(--gold-soft));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+
+/* Contact card */
+.contact dl{background:linear-gradient(160deg,var(--navy-800),var(--navy-900));border:1px solid rgba(212,175,55,.45);border-top:4px solid var(--gold);border-radius:16px;padding:28px;gap:0;box-shadow:0 16px 40px rgba(0,0,0,.45),0 0 0 1px rgba(212,175,55,.08) inset}
+.contact dl>div{padding:14px 0;border-bottom:1px solid var(--line)}
+.contact dl>div:last-child{border-bottom:0;padding-bottom:0}
+.contact dl>div:first-child{padding-top:0}
+.contact dt{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.contact dd{color:var(--ink);font-size:1.05rem}
+.contact dd a:not(.btn){color:var(--gold-soft);text-decoration:none;font-weight:700}
+.contact dd a:not(.btn):hover{text-decoration:underline}
+.phones a{border-color:rgba(212,175,55,.5);color:var(--gold-soft)}
+.phones a:hover{border-color:var(--gold);background:rgba(212,175,55,.12);color:#fff}
+.contact .map{border:1px solid rgba(212,175,55,.45);border-radius:16px;padding:28px;background:linear-gradient(160deg,var(--navy-850),var(--navy-900));box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.contact .map h3{color:var(--gold-soft)}
