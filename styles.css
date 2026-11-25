@@ -439,3 +439,16 @@ footer a:hover{color:var(--gold-soft)}
 .brand span { font-size: 1.05rem; font-weight: 700; letter-spacing: .02em; color: var(--gold-soft); }
 @media (max-width: 1180px) { .brand img { width: 56px; height: 56px; } .brand b { font-size: 1.9rem; } .brand span { font-size: .92rem; } }
 @media (max-width: 520px) { .brand { gap: 10px; } .brand img { width: 44px; height: 44px; } .brand b { font-size: 1.45rem; } .brand span { font-size: .78rem; } }
+
+/* (FCSE) in gold */
+.fcse{color:var(--gold-soft);font-weight:inherit}
+.brand b .fcse{color:var(--gold);background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-size:.9em;margin-left:2px}
+.hero-logo{display:flex;flex-direction:column;align-items:center;gap:6px}
+.hero-brand{font-family:var(--display);font-weight:700;font-size:clamp(3.4rem,7vw,5.6rem);line-height:1;letter-spacing:.06em;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 18px rgba(212,175,55,.35));text-align:center}
+.pill .fcse{color:var(--gold-soft)}
+@media (max-width:1180px){.brand b .fcse{font-size:.88em}}
+.fcse{font-style:normal}
+.brand b{white-space:nowrap}
+nav.main a{white-space:nowrap}
+@media (max-width:1180px){.brand b{font-size:1.6rem}.brand img{width:48px;height:48px}.brand span{font-size:.82rem}}
+@media (max-width:520px){.brand b{font-size:1.25rem}.brand img{width:40px;height:40px}.brand span{font-size:.7rem}}
