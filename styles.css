@@ -609,3 +609,26 @@ html[dir=rtl] .wa-float{right:auto;left:16px}
 @media (max-width:700px){.topbar .wrap{justify-content:center}.dr-pill{order:-1;width:100%;justify-content:center}}
 #data-recovery{scroll-margin-top:150px}
 #data-recovery:target{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.45),0 12px 40px rgba(212,175,55,.2)}
+
+/* Data Recovery link in the main menu */
+nav.main a.nav-dr{color:var(--gold-soft);display:inline-flex;align-items:center;gap:6px}
+nav.main a.nav-dr::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(212,175,55,.7);animation:drpulse 2.4s ease-out infinite}
+nav.main a.nav-dr:hover{color:#fff}
+@media (min-width:861px){nav.main{gap:14px}nav.main a{font-size:.97rem}.brand b{font-size:2.1rem}}
+@media (prefers-reduced-motion:reduce){nav.main a.nav-dr::before{animation:none}}
+/* Header: keep space between the brand and the menu; compact hero chips so two rows fit */
+@media (min-width:861px){.brand b{font-size:1.9rem}.brand span{font-size:.95rem}.brand img{width:60px;height:60px}header.site .wrap{gap:28px}}
+.picker .chips{gap:6px}
+.picker .chip{padding:0 11px;font-size:.93rem;min-height:38px}
+.picker{max-width:600px}
+
+/* Data Recovery in a gold box wherever it is mentioned */
+.dr-box,nav.main a.nav-dr,.chip[data-q="data recovery"]{background:var(--gold-grad);color:#1a1300;font-weight:800;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.dr-box{display:inline-block;padding:1px 10px;line-height:1.35}
+h3 .dr-box{margin-bottom:2px}
+nav.main a.nav-dr{padding:6px 14px;border:0}
+nav.main a.nav-dr::before{background:#1a1300;box-shadow:none;animation:none}
+nav.main a.nav-dr:hover{color:#1a1300;filter:brightness(1.08)}
+.chip[data-q="data recovery"]{border-color:var(--gold)}
+.chip[data-q="data recovery"]:hover,.chip[data-q="data recovery"][aria-pressed="true"]{background:var(--gold-grad);color:#1a1300;border-color:#fff;filter:brightness(1.1)}
+@media (max-width:860px){nav.main a.nav-dr{margin:8px 0;justify-content:center}}
