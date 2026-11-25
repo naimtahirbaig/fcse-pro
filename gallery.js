@@ -8,8 +8,8 @@
   var total = D.brands.reduce(function (n, b) { return n + b.files.length; }, 0);
   function updateCta(key) {
     if (!cta) return;
-    if (CAT[key]) { cta.href = 'parts.html#brand=' + CAT[key]; cta.textContent = CAT[key] + ' parts catalog'; }
-    else { cta.href = 'parts.html'; cta.textContent = 'Parts catalog'; }
+    if (CAT[key]) { cta.href = 'parts#brand=' + CAT[key]; cta.textContent = CAT[key] + ' parts catalog'; }
+    else { cta.href = 'parts'; cta.textContent = 'Parts catalog'; }
   }
   function list() {
     var key = active, type = typeSel ? typeSel.value : 'all', words = (q ? q.value : '').toLowerCase().split(/\s+/).filter(Boolean), out = [];

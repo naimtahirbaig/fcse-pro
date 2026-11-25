@@ -1,7 +1,7 @@
 /* FCSE shared extras: offer strip, section quick-links, floating side tabs, CTA band, FAQ accordions */
 (function () {
-  var page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  if (page === '') page = 'index.html';
+  var page = (location.pathname.split('/').pop() || 'index').toLowerCase();
+  if (page === '') page = 'index';
   var WA = 'https://wa.me/923216141055?text=Hello%20First%20Computer%20Service%20%26%20Engineering%2C%20I%20need%20help%20with%20my%20computer.';
   var ico = {
     call: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
@@ -33,18 +33,18 @@
 
   /* 2. "In this section" quick links */
   var groups = {
-    parts: [['parts.html', 'Parts catalog'], ['gallery.html', 'Parts photo gallery'], ['quote.html', 'Quote list']],
+    parts: [['parts', 'Parts catalog'], ['gallery', 'Parts photo gallery'], ['quote', 'Quote list']],
     gallery: null, quote: null
   };
-  var partsPages = { 'parts.html': 1, 'gallery.html': 1, 'quote.html': 1 };
-  var guidePage = /^guides?(-.*)?\.html$/.test(page);
+  var partsPages = { 'parts': 1, 'gallery': 1, 'quote': 1 };
+  var guidePage = /^guides?(-.*)?$/.test(page);
   var links = null, label = '';
   if (partsPages[page]) { links = groups.parts; label = 'Parts'; }
   else if (guidePage) {
-    links = [['guides.html', 'All guides'], ['guide-laptop-wont-charge.html', 'Won’t charge'], ['guide-laptop-running-slow.html', 'Running slow'], ['guide-laptop-overheating.html', 'Overheating'], ['guide-cracked-screen.html', 'Cracked screen'], ['guide-liquid-spill.html', 'Liquid spill'], ['guide-backup-your-files.html', 'Back up files']];
+    links = [['guides', 'All guides'], ['guide-laptop-wont-charge', 'Won’t charge'], ['guide-laptop-running-slow', 'Running slow'], ['guide-laptop-overheating', 'Overheating'], ['guide-cracked-screen', 'Cracked screen'], ['guide-liquid-spill', 'Liquid spill'], ['guide-backup-your-files', 'Back up files']];
     label = 'Guides';
-  } else if (page === 'services.html' || page === 'book.html' || page === 'contact.html') {
-    links = [['services.html', 'Services'], ['book.html', 'Book a repair'], ['contact.html', 'Contact']];
+  } else if (page === 'services' || page === 'book' || page === 'contact') {
+    links = [['services', 'Services'], ['book', 'Book a repair'], ['contact', 'Contact']];
     label = 'Repairs';
   }
   var anchor = document.querySelector('.strip') || header;
@@ -66,19 +66,19 @@
     tabs.className = 'side-tabs';
     tabs.innerHTML =
       '<a href="tel:+923338635515" aria-label="Call 0333 863 5515">' + ico.call + '<span>Call</span></a>' +
-      '<a href="book.html" aria-label="Book a repair">' + ico.book + '<span>Book</span></a>' +
-      '<a href="parts.html" aria-label="Parts catalog">' + ico.parts + '<span>Parts</span></a>';
+      '<a href="book" aria-label="Book a repair">' + ico.book + '<span>Book</span></a>' +
+      '<a href="parts" aria-label="Parts catalog">' + ico.parts + '<span>Parts</span></a>';
     document.body.appendChild(tabs);
   }
 
   /* 4. Closing call-to-action band */
   var main = document.querySelector('main');
   var footer = document.querySelector('footer');
-  if (main && footer && !document.querySelector('.cta-band') && page !== 'book.html') {
+  if (main && footer && !document.querySelector('.cta-band') && page !== 'book') {
     var cta = document.createElement('section');
     cta.className = 'cta-band';
     cta.innerHTML = '<div class="wrap"><div><h2>Computer trouble? Bring it to us.</h2><p>Book a repair, message us on WhatsApp or call the shop on Abbot Road, Sialkot.</p></div>' +
-      '<div class="cta-actions"><a class="btn" href="book.html">Book a repair</a><a class="btn wa" href="' + WA + '" target="_blank" rel="noopener">WhatsApp</a><a class="btn light" href="tel:+923338635515">Call 0333 863 5515</a></div></div>';
+      '<div class="cta-actions"><a class="btn" href="book">Book a repair</a><a class="btn wa" href="' + WA + '" target="_blank" rel="noopener">WhatsApp</a><a class="btn light" href="tel:+923338635515">Call 0333 863 5515</a></div></div>';
     footer.parentNode.insertBefore(cta, footer);
   }
 
