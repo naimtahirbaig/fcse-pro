@@ -1,0 +1,15 @@
+{
+  "name": "First Computer Service & Engineering",
+  "short_name": "FCSE",
+  "description": "Computer and laptop repair in Sialkot, Abbot Road.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070B16",
+  "theme_color": "#1766EB",
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+    {"src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
