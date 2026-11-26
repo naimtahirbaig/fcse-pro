@@ -36,5 +36,5 @@
 @media(max-width:1000px){.kinds{grid-template-columns:repeat(2,minmax(0,1fr))}.tpls{grid-template-columns:repeat(2,minmax(0,1fr))}.chooser{grid-template-columns:1fr}}
 @media(max-width:640px){.kinds,.tpls,.cols{grid-template-columns:1fr}}
 .nav-wd{white-space:nowrap}
-a.btn.ghost,.btn.ghost{background:transparent;border:2px solid #d4af37;color:#f3d97e}
-a.btn.ghost:hover{background:#d4af37;color:#1a1300}
+
+.tpl .pg{font-size:13.5px;color:#b6c4e3;margin:12px 0 4px}.tpl .pg b{color:#f3d97e}
