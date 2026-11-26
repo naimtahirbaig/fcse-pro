@@ -632,3 +632,21 @@ nav.main a.nav-dr:hover{color:#1a1300;filter:brightness(1.08)}
 .chip[data-q="data recovery"]{border-color:var(--gold)}
 .chip[data-q="data recovery"]:hover,.chip[data-q="data recovery"][aria-pressed="true"]{background:var(--gold-grad);color:#1a1300;border-color:#fff;filter:brightness(1.1)}
 @media (max-width:860px){nav.main a.nav-dr{margin:8px 0;justify-content:center}}
+
+/* Web Development nav link */
+nav.main .nav-wd{color:#f3d97e}
+nav.main .nav-wd:hover,nav.main .nav-wd[aria-current="page"]{color:#fff}
+@media (min-width:861px) and (max-width:1280px){nav.main{gap:12px}nav.main a{font-size:15px}}
+@media (min-width:861px){
+header.site .brand b{font-size:1.45rem!important}
+header.site .brand>span>span{font-size:.85rem!important}
+nav.main{gap:9px!important}nav.main a{font-size:14px!important}
+nav.main a.nav-dr{padding-left:9px!important;padding-right:9px!important}
+nav.main a.btn{padding-left:12px!important;padding-right:12px!important}
+}
+
+/* Owner caption under the portrait */
+.hero-photo figcaption{position:absolute;left:var(--cap-in,7px);right:var(--cap-in,7px);bottom:var(--cap-in,7px);z-index:3;padding:34px 10px 10px;text-align:center;border-radius:0 0 14px 14px;background:linear-gradient(180deg,rgba(5,10,25,0) 0,rgba(5,10,25,.88) 62%);display:flex;flex-direction:column;gap:2px;pointer-events:none}
+.hero-photo figcaption b{font-family:"Barlow Condensed",sans-serif;font-size:1.3rem;letter-spacing:.04em;color:#fff;line-height:1.1}
+.hero-photo figcaption span{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+@media (min-width:1700px){.hero-photo{--cap-in:6px}}

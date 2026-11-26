@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Restaurant and Booking sample template | FCSE Web Development</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/webdev/demo.css">
+<style>:root{--c:#f59e0b;--cf:#1c0f0a;--bg:#1c0f0a;--ink:#fdeede;--hd:#1c0f0a;--line:#3a2118;--card:#2a1710;--ft:#120a06}</style></head>
+<body data-name="Restaurant and Booking">
+<header class="top"><div class="w"><a class="logo" href="#">KARAHI HOUSE</a><nav><a href="#menu">Menu</a><a href="#book">Book a table</a><a href="#visit">Visit</a></nav><a class="btn" href="#book">Book a table</a></div></header>
+<section class="sec" style="background:linear-gradient(120deg,#7c2d12,#b45309 60%,#f59e0b)"><div class="w"><h1 style="color:#fff">Fresh food, warm welcome</h1><p style="color:#fff3e0">A line about your kitchen. Open every day 12 pm to midnight.</p></div></section>
+<section class="sec" id="menu"><div class="w"><h2>Menu</h2><div class="chipbar" id="mc"><button class="chp" data-v="Starters" aria-pressed="true">Starters</button><button class="chp" data-v="Mains">Mains</button><button class="chp" data-v="Drinks">Drinks</button></div><div id="ml"></div><p class="note">Prices are placeholders. Your menu, your prices.</p></div></section>
+<section class="sec" id="book"><div class="w" style="max-width:560px"><h2>Book a table</h2><form id="bf" class="card"><label>Name</label><input name="Name" required><label>Phone</label><input name="Phone" required><div class="grid g2"><div><label>Date</label><input type="date" name="Date" required></div><div><label>Time</label><input type="time" name="Time" required></div></div><label>Guests</label><select name="Guests"><option>2</option><option>4</option><option>6</option><option>8+</option></select><p><button class="btn">Request booking on WhatsApp</button></p></form></div></section>
+<section class="sec" id="visit"><div class="w card"><h3>Visit us</h3><p>Main Boulevard, your city. Open daily 12 pm to midnight.</p></div></section><footer class="f"><div class="w">KARAHI HOUSE. Sample website with made-up names. Built as a template by First Computer Service &amp; Engineering (FCSE).</div></footer>
+<script src="/webdev/demo.js"></script>
+<script>var M={Starters:[['Chicken soup',250],['Seekh kebab',480],['Samosa chaat',220]],Mains:[['Chicken karahi',1450],['Mutton handi',1900],['Butter naan',60]],Drinks:[['Mint lemonade',180],['Lassi',200],['Doodh patti chai',120]]};
+function m(v){$('#ml').innerHTML=M[v].map(function(x){return'<div style="display:flex;justify-content:space-between;border-bottom:1px dashed #5a3b2c;padding:12px 0"><span>'+x[0]+'</span><b style="color:#fcd34d">Rs. '+x[1]+'</b></div>'}).join('')}m('Starters');chips($('#mc'),m);
+$('#bf').addEventListener('submit',function(e){e.preventDefault();wa('Table booking\n'+fd(this))});</script>
+</body></html>

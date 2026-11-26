@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio sample template | FCSE Web Development</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/webdev/demo.css">
+<style>:root{--c:#f59e0b;--cf:#111;--bg:#0f0f12;--ink:#fff;--hd:#0f0f12;--line:#2a2a33;--card:#17171c;--ft:#000}</style></head>
+<body data-name="Portfolio">
+<header class="top"><div class="w"><a class="logo" href="#">AYAN STUDIO</a><nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav><a class="btn" href="#contact">Get in touch</a></div></header>
+<section class="sec"><div class="w"><h1>Photography<br>that tells it</h1><p style="max-width:460px;color:#b9b9c6">A one-line introduction to your work and style.</p></div></section>
+<section class="sec" id="work" style="padding-top:0"><div class="w"><div class="chipbar" id="fl"><button class="chp" data-v="all" aria-pressed="true">All</button><button class="chp" data-v="Weddings">Weddings</button><button class="chp" data-v="Portraits">Portraits</button><button class="chp" data-v="Products">Products</button></div><div class="grid g3" id="gal"></div></div></section>
+<section class="sec" id="about"><div class="w grid g2"><div class="ph" style="min-height:240px"></div><div><h2>About</h2><p>A short story about you, your experience and how you work with clients.</p></div></div></section>
+<section class="sec" id="contact"><div class="w" style="max-width:560px"><h2>Let's talk</h2><form id="f"><label style="color:#fff">Name</label><input name="Name" required><label style="color:#fff">Project</label><textarea name="Project"></textarea><p><button class="btn">Send on WhatsApp</button></p></form></div></section><footer class="f"><div class="w">AYAN STUDIO. Sample website with made-up names. Built as a template by First Computer Service &amp; Engineering (FCSE).</div></footer>
+<script src="/webdev/demo.js"></script>
+<script>var cols=['#f59e0b,#b45309','#38bdf8,#1d4ed8','#a78bfa,#6d28d9','#34d399,#047857','#fb7185,#be123c','#fbbf24,#78350f','#22d3ee,#0e7490','#f472b6,#9d174d','#a3e635,#3f6212'];var cats=['Weddings','Portraits','Products'];var items=cols.map(function(c,i){return{c:c,t:cats[i%3],n:'Project '+(i+1)}});
+function draw(v){$('#gal').innerHTML=items.map(function(p,i){return(v==='all'||p.t===v)?'<button class="card" data-i="'+i+'" style="padding:0;cursor:pointer;overflow:hidden;border:0"><div style="height:190px;background:linear-gradient(135deg,'+p.c+')"></div><div style="padding:10px 14px;text-align:left;color:#fff"><b>'+p.n+'</b><br><span style="color:#b9b9c6;font-size:13px">'+p.t+'</span></div></button>':''}).join('')}
+draw('all');chips($('#fl'),draw);
+$('#gal').addEventListener('click',function(e){var b=e.target.closest('[data-i]');if(!b)return;var p=items[b.dataset.i];modal('<div style="height:320px;border-radius:12px;background:linear-gradient(135deg,'+p.c+')"></div><h3 style="margin-top:12px">'+p.n+'</h3><p>'+p.t+'. A short description of the project goes here.</p>')});
+$('#f').addEventListener('submit',function(e){e.preventDefault();wa('Portfolio enquiry\n'+fd(this))});</script>
+</body></html>
